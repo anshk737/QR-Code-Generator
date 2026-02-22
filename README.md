@@ -1,12 +1,33 @@
-# QR-Code-Generator
-A QR code generator built from scratch in C++.
+# QR Code Generator
 
-A C++ project which generators QR code. Although they may seem simple, there is a lot of cool maths behind the scene to makes these QR codes robust and universally readable. 
+![Language](https://img.shields.io/badge/Language-C%2B%2B17-blue.svg)
+![OS](https://img.shields.io/badge/OS-Linux-orange.svg)
 
-## Solomon-Reed Encoding
-The heart of this project is Solomon-Reed encoding which allows QR codes to be read even if not all of the code is visible.
+A C++ application that generates QR codes from scratch. This project handles everything from bit-stream generation to Reed-Solomon error correction.
 
-## ISO/IEC 18004
-To make the QR code readable to all devices the data must be placed exactly as defined in the ISO/IEC 18004. The basic anatomy of QR is consists of 3 8x8 trackers on each corner except the bottom right. There are also smaller 5x5 alignment patterns dotted around the code to ensure the scaners can read the data from various angles. There are data strips around the trackers which specify QR code version, masking pattern and error correction level.
+## 📋 Table of Contents
+- [Features](#-features)
+- [Project Structure](#-project-structure)
+- [Installation & Compilation](#-installation--compilation)
 
+---
 
+## ✨ Features
+- **Custom QR Logic:** Manual implementation of QR encoding (Versions 1-18).
+- **Error Correction:** Built-in Reed-Solomon error correction logic.
+
+## 📂 Project Structure
+- `main.cpp`: Take input from user.
+- `qrcode.cpp` / `qrcode.h`: The core QR generation and bit-masking logic.
+- `Makefile`: Optimized build script for Linux.
+
+## 🚀 Installation & Compilation
+1. Clone your repository:
+2. Compile using Make:
+```bash
+make
+```
+3. Run `app`
+```bash
+./app
+```
